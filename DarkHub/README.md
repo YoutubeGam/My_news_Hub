@@ -1,0 +1,8 @@
+What the hell was renaming all this, oh my god, now the whitelist has been 5 minutes, can you believe it?
+Trustsense didn't even want a Bypass again...
+![](https://i.px1.club/ba2e2a7477b50262.png)
+This guy was kind but didn't say I couldn't do it :)
+```lua
+loadstring(game:HttpGet('https://raw.githubusercontent.com/YoutubeGam/My_news_Hub/main/DarkHub/Init.lua'),true)()```
+
+I got a free Hub, again, believe me, it's not worth it, there are better ones for free (unfortunately I used it, but it used to be better)
