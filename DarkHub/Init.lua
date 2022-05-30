@@ -2345,6 +2345,6 @@ local id=game.PlaceId
 repeat wait()
 	Game=link:format('scripts/'..id)
 until Game~=nil
-if pcall(function()loadstring(game:HttpGet(Game),true)();end) then
-	loadstring(game:HttpGet(link:formart('scripts/Universal')),true)();
+if not(pcall(function()loadstring(game:HttpGet(Game),true)();end)) then
+	loadstring(game:HttpGet(link:format('scripts/Universal')),true)();
 end;
