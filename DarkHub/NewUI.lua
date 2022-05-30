@@ -5,9 +5,9 @@ Gui=game:GetService'CoreGui'.ChildAdded:Connect(function(obj)
 	err,s=pcall(function()
 		if obj.Name=='MarkBeatsIsGay'then
 			local loads
+			obj.Parent=gethui()
 			local obj=obj:WaitForChild'MainFrame'
 			getgenv().gethui=original
-			obj.Parent=gethui()
 			repeat wait()
 				loads=obj:FindFirstChild('Title')
 			until loads~=nil
