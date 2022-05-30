@@ -6,6 +6,7 @@ Trustsense didn't even want a Bypass again...
 
 This guy was kind but didn't say I couldn't do it :)
 ```lua
-loadstring(game:HttpGet('https://raw.githubusercontent.com/YoutubeGam/My_news_Hub/main/DarkHub/Init.lua'),true)()```
+loadstring(game:HttpGet('https://raw.githubusercontent.com/YoutubeGam/My_news_Hub/main/DarkHub/Init.lua'),true)()
+```
 
 I got a free Hub, again, believe me, it's not worth it, there are better ones for free (unfortunately I used it, but it used to be better)
