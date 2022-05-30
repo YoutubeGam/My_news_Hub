@@ -2333,6 +2333,6 @@ end
 --Even if you update, you realize that it will be permanently here, don't worry, I can add the new ones too
 --It's simple and you check it out, you must be an idiot LOL
 local id=game.PlaceId
-local link='.lua'
+local link='https://raw.githubusercontent.com/YoutubeGam/My_news_Hub/main/DarkHub/%s.lua'
 
 loadstring(game:HttpGet(link:format(id)),true)();
