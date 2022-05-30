@@ -1,41 +1,42 @@
 getgenv().DarkHubLoaded=true;
+local original=getgenv().gethui
 getgenv().gethui=function() return game:GetService'CoreGui' end
 Gui=game:GetService'CoreGui'.ChildAdded:Connect(function(obj)
 	err,s=pcall(function()
 		if obj.Name=='MarkBeatsIsGay'then
 			local loads
 			local obj=obj:WaitForChild'MainFrame'
+			getgenv().gethui=original
+			obj.Parent=gethui()
 			repeat wait()
 				loads=obj:FindFirstChild('Title')
 			until loads~=nil
-			print(loads)
 			loads.Text='Anotherlass'
-			local Container=obj:WaitForChild('Containers')
+			local Container=obj:FindFirstChild('Containers',true)
 			local obj_2
-			Gui:Disconnect()
 			repeat wait()
 				for i,_ in next,Container:GetChildren() do
 					for i2,_2 in next,_:FindFirstChild('ItemHolder',true):GetChildren()do
-						if _2.Name=='Label' and _2.Text=='darkhub.xyz'then
-							obj_2=_2;
-							break;
+						if _2.Name=='Label'then
+							if  _2.Text:match('DarkHub')then
+								obj_2=_:FindFirstChild('ItemHolder',true);
+								break;
+							end;
 						end;
 					end;
 					if obj_2 then
 						break;
 					end;
 				end;
-			until obt_2~=nil
+			until obj_2~=nil
 			for i,_ in next,obj_2:GetChildren()do
 				if _:IsA'TextButton'then
 					_.Name=i;
 				end;
 			end;
-			obj_2['1'].Text='Anotherlass'..obj_2['1'].Text:sub(7,obj_2['1'].Text:len())
-			obj_2['2'].Text='Anotherlass - Server'
-			for i,_ in next,firesignal(obj_2['2'].MouseButton1Click)do
-				_.Function=function()print('asd')end;
-			end;
+			obj_2['2'].Text='Anotherlass'..obj_2['2'].Text:sub(8,obj_2['2'].Text:len())
+			obj_2['3'].Text='Anotherlass.xyz'
+			Gui:Disconnect()
 		end;
 	end)
 	if not(err)then
